@@ -1,6 +1,6 @@
 # Implementation Plan: [FEATURE]
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Feature**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
 **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 ## Execution Flow (/plan command scope)
@@ -59,7 +59,7 @@
 
 **Testing (NON-NEGOTIABLE)**:
 - RED-GREEN-Refactor cycle enforced? (test MUST fail first)
-- Git commits show tests before implementation?
+- Version control commits show tests before implementation?
 - Order: Contract→Integration→E2E→Unit strictly followed?
 - Real dependencies used? (actual DBs, not mocks)
 - Integration tests for: new libraries, contract changes, shared schemas?
@@ -171,7 +171,7 @@ ios/ or android/
    - Quickstart test = story validation steps
 
 5. **Update agent file incrementally** (O(1) operation):
-   - Run `/scripts/update-agent-context.sh [claude|gemini|copilot]` for your AI assistant
+   - Run `/scripts/python spec_kit.py update-agent-context [claude|gemini|copilot]` for your AI assistant
    - If exists: Add only NEW tech from current plan
    - Preserve manual additions between markers
    - Update recent changes (keep last 3)

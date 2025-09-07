@@ -9,7 +9,7 @@ This is the second step in the Spec-Driven Development lifecycle.
 
 Given the implementation details provided as an argument, do this:
 
-1. Run `scripts/setup-plan.sh --json` from the repo root and parse JSON for FEATURE_SPEC, IMPL_PLAN, SPECS_DIR, BRANCH. All future file paths must be absolute.
+1. Run `python spec_kit.py setup-plan --json` from the repo root and parse JSON for FEATURE_SPEC, IMPL_PLAN, SPECS_DIR, CURRENT_FEATURE. All future file paths must be absolute.
 2. Read and analyze the feature specification to understand:
    - The feature requirements and user stories
    - Functional and non-functional requirements
@@ -36,6 +36,6 @@ Given the implementation details provided as an argument, do this:
    - Ensure all required artifacts were generated
    - Confirm no ERROR states in execution
 
-6. Report results with branch name, file paths, and generated artifacts.
+6. Report results with feature name, file paths, and generated artifacts.
 
 Use absolute paths with the repository root for all file operations to avoid path issues.
